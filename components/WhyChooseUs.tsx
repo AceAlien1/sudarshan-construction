@@ -247,23 +247,32 @@ export default function WhyChooseUs() {
                   key={`${client.name}-${index}`}
                   className="flex-shrink-0 w-[300px] mx-3"
                 >
-                  <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
-                    <div className="h-24 flex items-center justify-center mb-4">
-                      <Image
-                        src={client.logo}
-                        alt={client.name}
-                        width={160}
-                        height={80}
-                        className="object-contain"
-                      />
+                  <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all hover:-translate-y-1 duration-300">
+                    <div className="flex flex-col items-center">
+                      <div className="w-16 h-16 rounded-full bg-gradient-to-br from-primary/10 to-primary-dark/10 flex items-center justify-center mb-4">
+                        <span className="text-2xl font-bold text-primary">
+                          {client.name[0]}
+                        </span>
+                      </div>
+                      <div className="text-center">
+                        <h4 className="font-semibold text-slate-800 mb-2">
+                          {client.name}
+                        </h4>
+                        <p className="text-sm text-slate-600 flex items-center justify-center gap-2">
+                          <Star className="w-4 h-4 text-primary" />
+                          {client.location}
+                        </p>
+                      </div>
                     </div>
-                    <div className="text-center">
-                      <h4 className="font-semibold text-slate-800">
-                        {client.name}
-                      </h4>
-                      <p className="text-sm text-slate-600">
-                        {client.location}
-                      </p>
+                    <div className="mt-4 pt-4 border-t border-slate-100">
+                      <div className="flex items-center justify-center gap-1">
+                        {[1, 2, 3, 4, 5].map((star) => (
+                          <Star
+                            key={star}
+                            className="w-4 h-4 fill-primary text-primary"
+                          />
+                        ))}
+                      </div>
                     </div>
                   </div>
                 </motion.div>

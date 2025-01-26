@@ -24,13 +24,13 @@ export default function Footer() {
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
               <div className="w-8 h-8 rounded-lg flex items-center justify-center">
-              <Image
-                src="/logo.webp"
-                alt="logo"
-                height={30}
-                width={30}
-                className="rounded-full"
-              />
+                <Image
+                  src="/logo.webp"
+                  alt="logo"
+                  height={30}
+                  width={30}
+                  className="rounded-full"
+                />
               </div>
               <span className="text-xl text-black/60 font-bold bg-gradient-to-r from-primary to-primary-dark bg-clip-text text-transparent">
                 Sudarshan Construction
@@ -65,7 +65,7 @@ export default function Footer() {
                 (item) => (
                   <motion.li key={item} whileHover={{ x: 5 }}>
                     <Link
-                      href={`/${item.toLowerCase()}`}
+                      href={`${item === "Home" ? "/" : item.toLowerCase()}`}
                       className="text-text-light hover:text-primary flex items-center space-x-1"
                     >
                       <span>{item}</span>

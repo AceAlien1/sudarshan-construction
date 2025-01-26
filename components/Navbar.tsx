@@ -53,7 +53,7 @@ export default function Navbar() {
   }, []);
 
   const handleRedirect = () => {
-    router.push("/get-started");
+    router.push("/contact");
     setIsOpen(false);
   };
 
@@ -67,29 +67,27 @@ export default function Navbar() {
       <div className="container mx-auto px-4 max-w-6xl">
         <div className="flex items-center h-16 relative">
           {/* Logo Section */}
-          <Link
-              href="/"
-              
+          <Link href="/">
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="flex items-center space-x-2"
             >
-          <motion.div
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="flex items-center space-x-2"
-          >
-            <Image
+              <Image
                 src="/logo.webp"
                 alt="logo"
                 height={30}
                 width={30}
                 className="rounded-full"
               />
-            
-            
-            <div className="text-xl font-bold bg-gradient-to-r from-primary to-primary-dark bg-clip-text text-transparent">
-              <span className="text-black/60 font-bold">Sudarshan Construction</span>
+
+              <div className="text-xl font-bold bg-gradient-to-r from-primary to-primary-dark bg-clip-text text-transparent">
+                <span className="text-black/60 font-bold">
+                  Sudarshan Construction
+                </span>
               </div>
-          </motion.div>
-            </Link>
+            </motion.div>
+          </Link>
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center justify-center absolute left-1/2 -translate-x-1/2 space-x-1">
